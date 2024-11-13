@@ -20,8 +20,7 @@ app.use('/user',userRoutes)
 app.get('/',(req,res)=>{
     res.json("Hello")
 })
-//will use cloud mongoDB 
-// const CONNECTION_URL="mongodb+srv://shreyansh:Shreyansh$123@cluster0.ap0tnyi.mongodb.net/"
+
 const PORT=process.env.PORT ||10000;
 mongoose.connect(process.env.MONGO_KEY).then(
     ()=>app.listen(PORT,()=>console.log(`Connection established at port ${PORT}`)))
